@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png'
 import arrow_icom from '../../assets/arrow_icon.png'
 import { useContext } from 'react'
 import { CoinContext } from '../../context/CoinContext'
+import { link } from 'react-router-dom'
   const Navbar = () => {
 
     const { setCurrency } = useContext(CoinContext);

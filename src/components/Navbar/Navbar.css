@@ -48,6 +48,26 @@
     cursor: pointer;
 }
 .Navbar button img{
-    width: 13px;
-    
+    width: 13px;  
 }
+@media (max-width: 900px) {
+    .Navbar{
+        padding: 20px 8%;
+    }
+    .Navbar button{
+        gap: 8px;
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+        .Navbar{
+            padding: 20px 5%;
+        }
+        .Navbar ul{
+            display: none;
+        }
+        .Navbar button img{
+           width: 12px;
+        }
+    }
