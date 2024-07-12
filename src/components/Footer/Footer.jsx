@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='footer'>
         <p>
-            copyright © 2022
+            copyright © 2024 cryptoplace- All rights reserved
         </p>
     </div>
   )

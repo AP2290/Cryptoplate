@@ -7,7 +7,7 @@ const CoinContextProvider = (props)=>{
     const [allCoin, setAllCoin] = useState([])
     const [currency, setCurrency] = useState({
         name: "USD",
-        Symbol: "$"  
+        symbol: "$"  
     })
         const fetchAllCoin = async()=>{
             const options = {
@@ -23,7 +23,7 @@ const CoinContextProvider = (props)=>{
 
         useEffect(()=>{
             fetchAllCoin()
-        },[])
+        },[currency])
 
 
         const ContextValue = {

@@ -121,4 +121,6 @@
     .hero form button {
         width: 100%;
     }
-
+    .search-bar{
+        padding: 15px;
+    }

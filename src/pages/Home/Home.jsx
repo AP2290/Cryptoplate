@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Home.css";
 import { CoinContext } from "../../context/CoinContext.jsx";
-import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Home = () => {
 const {allCoin, currency} = useContext(CoinContext)
 const[displayCoin, setDisplayCoin] = useState([]);
@@ -34,7 +34,7 @@ useEffect (() => {
       <h1>Largest crypto market place</h1>
       <p> welcome to the new website that will help you to buy and sell crypto</p>
       <form onSubmit={searchHandler}>
-        <input onChange = {inputHandler} list="coinlist" value={input} type="text" placeholder='search crypto' required/>
+        <input  className='search-bar' onChange = {inputHandler} list="coinlist" value={input} type="text" placeholder='search crypto' required/>
         <datalist id="coinlist">
           {
             allCoin.map((iterm, index) => (
@@ -55,7 +55,7 @@ useEffect (() => {
     </div>
     {
       displayCoin.slice(0,10).map((iterm, index) => (
-        <link className='table-layout' key={index}>
+        <Link to={`/coin/${iterm.id}`} className='table-layout' key={index}>
         <p>{iterm.market_cap_rank}</p>
         <div>
           <img src={iterm.image} alt="" />
@@ -69,7 +69,7 @@ useEffect (() => {
           </p>
 
           <p className="market-cap">{currency.symbol} {iterm.market_cap.toLocaleString()}</p>
-        </link>
+        </Link>
     ))}
     </div>
     </div> 
